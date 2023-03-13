@@ -152,6 +152,7 @@ svg-button    == <span> <svg /><button /> </span>
   align-items: center;
   justify-content: space-between;
   column-gap: .25rem;
+  color: var(--white0);
 }
 
 .btn-primary.btn-svg__plus-text.show-icon--hover svg {

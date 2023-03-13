@@ -11,7 +11,7 @@ const Button = ({
   disabled = false,
   tabIndex = null,
   ariaLabel = "button",
-  role = "button",
+  role = null,
 }) => {
   return (
     <button

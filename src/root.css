@@ -96,8 +96,11 @@
   /* CHOOSE ONE PRIMARY/SECONDARY FONT */
 
   /* --primaryFont: Roboto, Helvetica, Arial, sans-serif; */
+
   /* --primaryFont: "Exo 2", -apple-systexm, ui-sans-serif, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+
   /* --secondaryFont: Optimistic Display, -apple-system, ui-sans-serif, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif; */
+  
   --primaryFont: "Open Sans", -apple-system, ui-sans-serif, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
 
   /* component constants */
@@ -123,7 +126,7 @@
   --overlaysm: rgba(0, 0, 0, .2);
   --overlaymd: rgba(0, 0, 0, .5);
   --overlaylg: rgba(0, 0, 0, .7);
-  --error-bg: #42181b;
+  --error-bg: #4b2528;
   --error-border: 1px solid #b93e3e;
 
   --box-shadow-md:
@@ -142,8 +145,7 @@
     rgba(0, 0, 0, .30) 0px 4px 6px 1px,
     rgba(0, 0, 0, .14) 0px 8px 10px 2px;
 
-  /*  im kind of over using box shadows for border bottom of header,
-      becomes straining on the eyes for darker themes
+  /*  use for border bottom of header if you like box shadow headers
     --box-shadow-header:
       rgba(0, 0, 0, 0.05) 0px 2px 1px 2px,
       rgba(0, 0, 0, .15) 0px 0px 3px 2px; */
@@ -152,6 +154,7 @@
 /* THEMES : inject @ <html>
 ============================*/
 .theme__dark {
+  --white0: #f6f9fb;
   --white1: #ebf1f6;
   --white2: #c0d7ed;
 
@@ -189,6 +192,7 @@
 
 /* https://colorhunt.co/palette/2c33332e4f4f0e8388cbe4de */
 .theme__medium {
+  --white0: #e7f4f4;
   --white1: #E2FFFF;
   --white2: #E2FFFF;
 
@@ -225,8 +229,9 @@
 }
 
 .theme__light {
-  --white1: #3c4043;
-  --white2: #384046;
+  --white0: #f5f9ff;
+  --white1: #33373a;
+  --white2: #2e353a;
 
   --black0: #f2f5f8;
   --black1: #eff3f7;
@@ -238,9 +243,9 @@
   --darkgrey1: #cbd0d4;
   --darkgrey2: #b2c4de;
 
-  --primary1: #5a9bf5;
-  --primary2: #2973db;
-  --primary3: #3a7fe0;
+  --primary1: #427fd4;
+  --primary2: #1652A7;
+  --primary3: #113669;
   --primary4: #3a7fe0;
   --primarylight1: #111314;
   --primarylight2: #3c4043;
@@ -253,11 +258,11 @@
   --scrollthumb: #778085;
   --scrollthumbhover: #666d71;
 
-  --placeholder: #414549;
-  --placeholder2: #363f46;
+  --placeholder: #34373a;
+  --placeholder2: #282f34;
 
-  --btn-primary--color: #ffffff;
-  --btn-dark-background: #e7ecf1;
+  --btn-primary--color: #fff;
+  --btn-dark-background: #F7F7F7;
 }
 
 html,

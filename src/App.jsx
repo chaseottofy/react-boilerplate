@@ -24,7 +24,7 @@ import {
 
 import {
   handleTheme,
-  setInitialPreferences,
+  handleUserPreferences,
   copyToClipboard
 } from './utils';
 
@@ -41,7 +41,6 @@ function App() {
     timeout: null,
   });
 
-
   /**
    * @description
    * set initial theme to match system preference
@@ -49,10 +48,7 @@ function App() {
    */
   useEffect(() => {
     if (!isFirstRender) return;
-    setInitialPreferences(
-      window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? "theme__light" : "theme__dark",
-      window.navigator.language
-    );
+    handleUserPreferences();
     setTheme(useLocal.get("theme"));
   }, []);
 
@@ -71,7 +67,6 @@ function App() {
               className="btn-primary"
               title="click for toast"
               onClick={(e) => {
-                // e.stopPropagation();
                 setExampleToast(prev => ({
                   ...prev,
                   show: true,
@@ -199,6 +194,13 @@ function App() {
 
         <div className="row">
           <Tags tags={["ADD(space/enter)", "PREV(backspace)", "DEL(click)"]} />
+        </div>
+
+
+        <div className="row">
+          <Button onClick={() => {
+            console.log(document.documentElement)
+          }}></Button>
         </div>
       </main>
 
