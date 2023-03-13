@@ -1,6 +1,6 @@
 import "../../styles/Toast.css";
 import PropTypes from "prop-types";
-import { useEffect, useRef } from "react";
+import { useRef, useEffect } from "react";
 import Button from "./Button";
 import { IoClose } from "../../assets/icons";
 
@@ -16,6 +16,7 @@ const Toast = ({ toast, setToast }) => {
     setToast(prev => ({
       ...prev,
       show: false,
+      message: "",
       callback: null,
       from: null,
       timeout: null,
@@ -23,12 +24,11 @@ const Toast = ({ toast, setToast }) => {
   };
 
   const closeOnClickedOutside = (e) => {
-    if (e.target === toast.from && !ref.current) {
+    if (e.target === toast.from && ref.current) {
       resetToast();
       return;
     }
-
-    if (e.target.closest(".toast") === null) {
+    if (e.target.closest(".toast") === null && ref.current) {
       resetToast();
       return;
     }
@@ -45,6 +45,7 @@ const Toast = ({ toast, setToast }) => {
       }
       ref.current = false;
       window.addEventListener("click", closeOnClickedOutside);
+
     } else {
       resetToast();
     }
@@ -52,7 +53,10 @@ const Toast = ({ toast, setToast }) => {
 
   return (
     <>
-      <aside className={toast.show ? "toast toast-show" : "toast toast-hide"}>
+      <aside
+        className={toast.show ? "toast toast-show" : "toast toast-hide"}
+        ref={ref}
+      >
         <div className="toast-col-1">
           <span className="toast-message">{toast.message}</span>
         </div>

@@ -41,6 +41,7 @@ function App() {
     timeout: null,
   });
 
+
   /**
    * @description
    * set initial theme to match system preference
@@ -64,27 +65,18 @@ function App() {
       />
       <main className="main">
 
-
-        <div className="row">
-          <Checkbox
-            checked={false}
-            className="btn-transparent btn-svgpair btn-force--square"
-          />
-          <Checkbox checked={false} title="check" />
-          <Checkbox checked={false} title="box" />
-        </div>
-
-
         <div className="row">
           <Tooltip content="click me" height="100%">
             <Button
               className="btn-primary"
               title="click for toast"
               onClick={(e) => {
+                // e.stopPropagation();
                 setExampleToast(prev => ({
+                  ...prev,
                   show: true,
                   message: "toast example",
-                  callback: () => { alert("callback example"); },
+                  callback: () => alert("example callback"),
                   from: prev.from === e.target ? null : e.target,
                   timeout: null,
                 }));
@@ -95,6 +87,15 @@ function App() {
           <Tooltip content="tooltip example" height="100%">
             <Button className="btn-dark" title="hover for tooltip" />
           </Tooltip>
+        </div>
+
+        <div className="row">
+          <Checkbox
+            checked={false}
+            className="btn-transparent btn-svgpair btn-force--square"
+          />
+          <Checkbox checked={false} title="check" />
+          <Checkbox checked={false} title="box" />
         </div>
 
 
@@ -201,8 +202,10 @@ function App() {
         </div>
       </main>
 
-
-      <Toast toast={exampleToast} setToast={setExampleToast} />
+      <Toast
+        toast={exampleToast}
+        setToast={setExampleToast}
+      />
     </>
   );
 }
