@@ -1,6 +1,6 @@
 # REACT : starter kit
 
-[Checkout the preact version of this kit (1/3 the size)](https://github.com/chaseottofy/react-boiler-v3)
+[Checkout the preact version of this kit (1/3 the size)](https://github.com/chaseottofy/preact-boilerplate)
 
 ## Light Theme 
 

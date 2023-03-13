@@ -188,14 +188,14 @@ function App() {
                 onChange={(e) => setExampleInput(e.target.value)}
               />
             }
-          />
+        />
         </div>
 
 
         <div className="row">
           <Tags tags={["ADD(space/enter)", "PREV(backspace)", "DEL(click)"]} />
         </div>
-        
+
       </main>
 
       <Toast
