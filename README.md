@@ -1,5 +1,7 @@
 # starter kit : react
 
+[Checkout the preact version of this kit (1/3 the size)](https://github.com/chaseottofy/react-boiler-v3)
+
 Light Theme Demo **(also includes Dark/Contrast theme)**
 
 ![screenshot](./screenshots/react_score.png)
