@@ -195,13 +195,7 @@ function App() {
         <div className="row">
           <Tags tags={["ADD(space/enter)", "PREV(backspace)", "DEL(click)"]} />
         </div>
-
-
-        <div className="row">
-          <Button onClick={() => {
-            console.log(document.documentElement)
-          }}></Button>
-        </div>
+        
       </main>
 
       <Toast
