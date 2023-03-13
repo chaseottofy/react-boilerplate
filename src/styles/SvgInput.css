@@ -1,0 +1,25 @@
+.svg-input {
+  display: flex;
+  position: relative
+}
+
+.svg-input svg {
+  fill: var(--placeholder2);
+  align-items: center;
+  display: flex;
+  height:100%;
+  width:18px;
+  justify-content: center;
+  left: 4px;
+  position: absolute;
+  top: 0;
+  z-index: 1
+}
+
+.svg-input input {
+  padding-left: 28px
+}
+
+.svg-input > input:focus + svg {
+  fill: var(--primarylight1) !important
+}

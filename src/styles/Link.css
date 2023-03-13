@@ -1,0 +1,16 @@
+.link-default > button {
+  outline: 2px solid transparent;
+}
+
+.link-default:focus-visible button {
+  outline: 2px solid var(--primary1);
+}
+
+.link-default button {
+  user-select: none;
+  pointer-events: none;
+}
+
+.link-default:hover button {
+  filter:brightness(1.2);
+}

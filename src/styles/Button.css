@@ -1,0 +1,211 @@
+.btn-dark,
+.btn-primary,
+.btn-transparent {
+  border-radius: 4px;
+  outline: 2px solid transparent;
+  border: 1px solid transparent;
+  padding: .375rem .5rem;
+  transition: var(--trans-bg--sm);
+  font-size: .875rem;
+}
+
+.btn-dark > *,
+.btn-primary > *,
+.btn-transparent > * {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* DARK/TRANSPARENT (both share hover/active/focus)
+=====================================*/
+.btn-dark,
+.btn-dark--svg {
+  background: var(--btn-dark-background);
+  border: 1px solid var(--darkgrey1);
+  color: var(--white2);
+}
+
+.btn-dark--svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.btn-transparent {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--white2);
+}
+
+/* this class is designed to only have icon as content */
+.btn-dark:hover,
+.btn-transparent:hover,
+.btn-dark--svg:hover {
+  background: var(--black2);
+}
+
+.btn-dark:hover svg,
+.btn-transparent:hover svg,
+.btn-dark--svg:hover svg {
+  fill: var(--white1);
+}
+
+.btn-dark:active,
+.btn-transparent:active,
+.btn-dark--svg:active {
+  background: var(--btn-dark-background);
+  border: 1px solid var(--darkgrey1);
+}
+
+.btn-dark:active svg,
+.btn-transparent:active svg,
+.btn-dark--svg:active svg {
+  fill: var(--white1);
+}
+
+.btn-dark:focus-visible,
+.btn-transparent:focus-visible,
+.btn-dark--svg:focus-visible {
+  border: 1px solid transparent;
+  outline: 2px solid var(--primary2);
+}
+
+.btn-dark:focus-visible svg,
+.btn-transparent:focus-visible svg,
+.btn-dark--svg:focus-visible svg {
+  fill: var(--white1);
+}
+
+/* PRIMARY/PRIMARYDARK
+=====================================*/
+.btn-primary,
+.btn-primary--svg {
+  background: var(--primary2);
+  border: 1px solid var(--primary1);
+  color: var(--btn-primary--color);
+}
+
+.btn-primary--svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.btn-primary--darker {
+  background: var(--primary3);
+  border: 1px solid var(--primary2);
+}
+
+.btn-primary:hover {
+  background: var(--primary1);
+}
+
+.btn-primary--darker:hover {
+  background: var(--primary2) !important;
+}
+
+.btn-primary:hover .btn-primary--svg:hover {
+  background: var(--primary1);
+}
+
+.btn-primary:active,
+.btn-primary--svg:active {
+  border: 1px solid transparent;
+  filter: brightness(0.8);
+  background: var(--primary1);
+}
+
+.btn-primary:focus-visible,
+.btn-primary--svg:focus-visible {
+  background: var(--primary1);
+  border: 1px solid transparent;
+  outline: 2px solid var(--primary2);
+}
+
+/* grouped
+=====================================*/
+/* 
+note :
+btn-svg--pair == <button> <svg /> </button>
+
+svg-button    == <span> <svg /><button /> </span>
+              == <span> <button /><svg /> </span>
+*/
+.btn-svgpair {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-svgpair {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  padding: 0 !important;
+}
+
+.btn-svg__plus-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: .25rem;
+}
+
+.btn-primary.btn-svg__plus-text.show-icon--hover svg {
+  opacity: 0;
+  fill:var(--btn-primary--color);
+}
+
+.btn-primary.btn-svg__plus-text.show-icon--hover:focus-visible svg {
+  opacity: 1;
+}
+
+.btn-primary.btn-svg__plus-text.show-icon--hover:hover svg {
+  opacity: 1;
+}
+
+.svg-button > button:focus-visible + svg {
+  fill: var(--primary1) !important
+}
+
+/* Success/Warning/Danger
+=====================================*/
+/* .btn__success {
+  box-shadow: 0 0 0 1px var(--primary1);
+} */
+
+/* Special 
+(fixed, disabled, small, force square)
+=====================================*/
+.btn-fixed {
+  width: 120px !important;
+}
+
+.btn-disabled {
+  filter: brightness(.7);
+  background: transparent;
+  border: 1px solid transparent;
+  pointer-events: none;
+  user-select: none;
+}
+
+.btn-small {
+  font-size: .75rem;
+  padding: .25rem .5rem;
+}
+
+.btnsvg-larger {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.btnsvg-larger svg {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.btn-force--square {
+  border-radius: 4px !important;
+}

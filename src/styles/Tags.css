@@ -1,0 +1,44 @@
+.tag-input {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 3.4rem;
+  padding: .75rem .5rem;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow-xl);
+  background: var(--black1);
+  max-width: 45rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: .25rem 0;
+}
+
+/* tags
+============================*/
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: .2rem .25rem;
+  outline: 2px solid transparent;
+  border: 1px solid transparent;
+}
+
+.tag svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+/* input
+============================*/
+.tag-input .tag-input--wrapper {
+  display: flex;
+  align-items: center;
+  margin: .125rem .25rem;
+}
+
+.tag-input--wrapper input {
+  font-size: .92rem;
+}
